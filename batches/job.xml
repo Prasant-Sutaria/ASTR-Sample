@@ -9,8 +9,7 @@
 	<!-- Load Common Actions -->
 	<load>page_actions/common_actions.xml</load>
 	
-	<batch name="exeVar[Batch_Name]"> <!-- Start of Batch -->
-	<batch name = "batch name" id="Env[APPLITOOLS_BATCH_ID]">
+	<batch name="exeVar[Batch_Name]" id="Env[APPLITOOLS_BATCH_ID]"> <!-- Start of Batch -->
 		<!-- Test Case - 1 -->
 		<test appname="exeVar[App_Name]" testname="Beta CPF Take Tour Page" tags="CPF_BETA">
 			<!-- Test Configuration -->
