@@ -1,0 +1,54 @@
+<job>
+
+	<!-- Load defined targetted Exec Env. -->
+	<load>conf/targetted_Exec_Env.xml</load>
+
+	<!-- Load Take a tour Page Actions -->
+	<load>page_actions/take_a_tour_page.xml</load>
+
+	<!-- Load Common Actions -->
+	<load>page_actions/common_actions.xml</load>
+	
+	<batch name="exeVar[Batch_Name]"> <!-- Start of Batch -->
+	<batch name = "batch name" id="Env[APPLITOOLS_BATCH_ID]">
+		<!-- Test Case - 1 -->
+		<test appname="exeVar[App_Name]" testname="Beta CPF Take Tour Page" tags="CPF_BETA">
+			<!-- Test Configuration -->
+			<configurations names="exeVar[Targetted_Env]"/>
+
+			<!-- Test Steps -->
+			<execute>
+			
+				<!-- Navigate to Landing page -->
+				<common_actions.Navigate_To_Beta_Landing_Page/>
+
+				<!-- Applitools Windows Checkpoint -->
+				<take_a_tour.Run_Visual_Check_On_Modal_Window stepName="CPF Take Tour Welcome Page"/>
+
+			</execute>
+
+		</test> <!-- End of Test Case -->
+
+		<!-- Test Case - 2 -->
+		<test appname="exeVar[App_Name]" testname="Beta CPF Landing Page" tags="CPF_BETA">
+			<!-- Test Configuration -->
+			<configurations names="exeVar[Targetted_Env]"/>
+
+			<!-- Test Steps -->
+			<execute>
+
+				<!-- Navigate to Landing page -->
+				<common_actions.Navigate_To_Beta_Landing_Page/>
+
+				<!-- Navigate to Landing page -->
+				<take_a_tour.Close_Modal_Window/>
+
+				<!-- Applitools Windows Checkpoint -->
+				<common_actions.Execute_Window_Checkpoint stepName="CPF Landing Page"/>
+			</execute>
+
+		</test>
+		
+	</batch> <!-- End of Batch -->
+
+</job>

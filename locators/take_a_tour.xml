@@ -1,0 +1,9 @@
+<definitions>
+    <var key="take_a_tour.Close_Window">span.icon-dls-close-outline</var>
+    <var key="take_a_tour.Next_Bttn">div.carousel__controls i.icons_space.icon-dls-arrow-right</var>
+    <var key="take_a_tour.Previous_Bttn">div.carousel__controls i.icons_space.icon-dls-arrow-left</var>
+    <var key="take_a_tour.Finish_Bttn">button.cmp-button--finish</var>
+    <var key="take_a_tour.Tour_Window">div.cmp-modal</var>
+    <var key="take_a_tour.Tour_Scrollable_Window">div.cmp-modal__body</var>
+    
+</definitions>

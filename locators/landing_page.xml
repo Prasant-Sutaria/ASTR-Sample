@@ -1,0 +1,8 @@
+<definitions>
+
+    <!-- Header related locators-->
+    <var key="landing_page.header.CPF_Schemes">a[href='/Members/Schemes']</var>
+    <var key="landing_page.header.Tools">a[href='/Members/Tools']</var>
+    <var key="landing_page.header.About_US">#aboutus</var>
+    <var key="landing_page.header.login">#logStatusTextD</var>
+</definitions>

@@ -1,0 +1,13 @@
+<definitions>
+
+    <take_a_tour.Close_Modal_Window>
+        <action type="click" by="css" selector = "span.icon-dls-close-outline"/>
+    </take_a_tour.Close_Modal_Window>
+
+    <take_a_tour.Run_Visual_Check_On_Modal_Window>
+        <action type="check" target="region" fullPage="true" stepName="exp[%stepName%]" by="css" selector="div.cmp-modal__body">
+            <add type="visualGridOption" key="polyfillAdoptedStyleSheets" value="true" />
+        </action>
+    </take_a_tour.Run_Visual_Check_On_Modal_Window>
+
+</definitions>

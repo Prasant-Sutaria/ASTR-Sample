@@ -1,0 +1,23 @@
+<definitions>
+
+
+    <!---->
+
+    <!-- Header related locators-->
+    <var key="common.header.CPF_Schemes">a[href='/Members/Schemes']</var>
+    <var key="common.header.Tools">a[href='/Members/Tools']</var>
+    <var key="common.header.About_US">#aboutus</var>
+    <var key="common.header.Login">#logStatusTextD</var>
+    <var key="common.header.Member">//span[contains(text(),'Member')]</var>
+
+    <!-- Footer related locators-->
+    <var key="common.footer.News">footer a[href='/members/news/news-categories-info/news-releases']</var>
+    <var key="common.footer.Join_US">footer a[href='/members/careers']</var>
+    <var key="common.footer.Useful_Links">footer a[href='/members/others/member-pages/useful-Links']</var>
+    <var key="common.footer.Sitemap">footer a[href='/members/Others/member-pages/sitemap']</var>
+    <var key="common.footer.Contact_US">footer a[href='/members/contact']</var>
+    <var key="common.footer.Feedback">footer a[href='/eSvc/Web/FeedbackSubscription/Index']</var>
+    <var key="common.footer.FAQ">footer a[href='/members/FAQ']</var>
+    
+
+</definitions>

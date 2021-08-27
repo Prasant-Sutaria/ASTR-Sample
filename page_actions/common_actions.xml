@@ -1,0 +1,19 @@
+<definitions>
+
+    <common_actions.Navigate_To_Beta_Landing_Page>
+        <action type="function-addPrefix" prefix="exeVar[App_Base_URL]" to="/member" OutputVariable="finalUrl" />
+		<action type="navigate">exp[%finalUrl%]</action>
+    </common_actions.Navigate_To_Beta_Landing_Page>
+
+    <common_actions.Navigate_To_URL>
+        <action type="function-addPrefix" prefix="exeVar[App_Base_URL]" to="exp[%subUrl%]" OutputVariable="finalUrl" />
+	    <action type="navigate">exp[%finalUrl%]</action>
+    </common_actions.Navigate_To_URL>
+
+    <common_actions.Execute_Window_Checkpoint>
+        <action type="check" target="window" fullPage="true" name="exp[%stepName%]">
+            <add type="visualGridOption" key="polyfillAdoptedStyleSheets" value="true" />
+        </action>
+    </common_actions.Execute_Window_Checkpoint>
+
+</definitions>
