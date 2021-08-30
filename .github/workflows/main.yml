@@ -32,7 +32,7 @@ jobs:
 
       - name: Install Chrome
         run: |
-          chmod +x ./scripts/InstallChrome.sh
+          chmod +x ./install_chrome.sh
           ./install_chrome.sh
       
       - name: Set up JDK 11
