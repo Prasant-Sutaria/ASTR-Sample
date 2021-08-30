@@ -9,7 +9,6 @@ on:
     branches: 
     - '**'
 
-
 env:
   APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
   APPLITOOLS_BATCH_ID: ${{ github.sha }}
@@ -35,15 +34,6 @@ jobs:
           chmod +x ./install_chrome.sh
           ./install_chrome.sh
 
-      - name: Set chromeDriver path
-        run:  export PATH=$PATH:{{github.GITHUB_WORKSPACE}}/chromedriver
-
-      - name: Print current dir
-        run: ls -lart
-
-      - name: Print PATH variable
-        run: echo $PATH
-
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -53,11 +43,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Execute ASTR jar
         run: |
-          echo ${{ secrets.APPLITOOLS_API_KEY }}
-          export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
-          export PATH=$PATH:{{github.GITHUB_WORKSPACE}}/chromedriver
-          java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,https://www.cpf.gov.sg]" "-var[App_Name,CPF]" "-var[Batch_Name,CPF Beta]" "-var[Targetted_Env,ultra_fast_headless]"
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+          java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,${{ secrets.APP_BASEURL}}]" "-var[App_Name,CPF]" "-var[Batch_Name,${{github.GITHUB_REPOSITORY}}]" "-var[Targetted_Env,ultra_fast_headless]"
