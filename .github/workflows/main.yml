@@ -38,10 +38,10 @@ jobs:
       - name: Set chromeDriver path
         run:  export PATH=$PATH:{{github.GITHUB_WORKSPACE}}/chromedriver
 
-      -name: Print current dir
+      - name: Print current dir
         run: ls -lart
 
-      -name: Print PATH variable
+      - name: Print PATH variable
         run: echo $PATH
 
       - name: Set up JDK 11
