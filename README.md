@@ -2,5 +2,3 @@ java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,<BAS
 
 Ultrafast Grid Execution ::
 java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,<BASE_URL>]" "-var[App_Name,<APP_NAME>]" "-var[Batch_Name,<Batch_NAME>]" "-var[Targetted_Env,ultra_fast_headless]"
-
-Added main.yaml
