@@ -53,6 +53,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Execute ASTR jar
         run: |
+          echo ${{ secrets.APPLITOOLS_API_KEY }}
           export APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }}
           export PATH=$PATH:{{github.GITHUB_WORKSPACE}}/chromedriver
           java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,https://www.cpf.gov.sg]" "-var[App_Name,CPF]" "-var[Batch_Name,CPF Beta]" "-var[Targetted_Env,ultra_fast_headless]"
