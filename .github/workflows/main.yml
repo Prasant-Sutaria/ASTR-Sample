@@ -13,6 +13,7 @@ on:
 env:
   APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
   APPLITOOLS_BATCH_ID: ${{ github.sha }}
+  APP_BASEURL: ${{ secrets.APP_BASEURL}}
 
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
@@ -37,7 +38,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Execute ASTR jar
-        run: java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,https://www.cpf.gov.sg]" "-var[App_Name,CPF]" "-var[Batch_Name,${{ github.GITHUB_WORKFLOW }}]" "-var[Targetted_Env,ultra_fast_headless]"
+        run: java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml "-var[App_Base_URL,{{env.APP_BASEURL}}]" "-var[App_Name,CPF]" "-var[Batch_Name,CPF Beta]" "-var[Targetted_Env,ultra_fast_headless]"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
