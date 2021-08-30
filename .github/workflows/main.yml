@@ -43,4 +43,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Execute ASTR jar
         run: |
-          java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml -var[App_Base_URL,${{secrets.APP_BASEURL}}] -var[App_Name,CPF] -var[Batch_Name,${{github.GITHUB_REPOSITORY}}] -var[Targetted_Env,ultra_fast_headless]
+          java -jar ApplitoolsSimpleTestRunner.jar batches/job.xml -var[App_Base_URL,${{secrets.APP_BASEURL}}] -var[App_Name,CPF] -var[Batch_Name,${{ github.GITHUB_REPOSITORY }}] -var[Targetted_Env,ultra_fast_headless]
